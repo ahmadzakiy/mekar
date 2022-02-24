@@ -1,0 +1,12 @@
+{
+  "name": "@mekar/token",
+  "version": "1.0.0",
+  "description": "token library",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest -i -c jest.config.js --coverage",
+    "build": ""
+  },
+  "author": "in.zakiy@gmail.com",
+  "license": "MIT"
+}  

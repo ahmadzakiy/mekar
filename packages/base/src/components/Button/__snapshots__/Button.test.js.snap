@@ -1,0 +1,12 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Component: BlButtonAv Should match snapshot 1`] = `
+<button
+  class="button"
+>
+  <!-- @slot Use slot for text -->
+  
+  Submit
+  
+</button>
+`;
