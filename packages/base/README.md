@@ -4,7 +4,7 @@
 Install the library via NPM
 
 ```bash
-yarn add mekar-libray
+yarn add mekar-library
 ```
 
 ## How to Use
