@@ -17,7 +17,7 @@ yarn add mekar-library
 With this kind of import, you will include the whole bundle of the library, but you can use all components directly in Vue Instance.
 
 ```js
-import Vue from 'vue'
+import { createApp } from 'vue'
 import App from './App.vue'
 
 // components
@@ -26,12 +26,9 @@ import Lib from 'mekar-library'
 // style
 import 'mekar-library/dist/mekar.css'
 
-Vue.use(Lib)
-
-new Vue({
-  el: '#app',
-  render: h => h(App)
-})
+const app = createApp(App)
+app.use(Lib)
+app.mount('#app')
 ```
 
 ### Selective Import
@@ -42,7 +39,7 @@ With this kind of import, you will include the whole bundle of the library, unle
 import { Button } from 'mekar-library'
 
 // style
-import 'mekar-library/dist/bundle.css'
+import 'mekar-library/dist/mekar.css'
 ```
 
 ## Contribution

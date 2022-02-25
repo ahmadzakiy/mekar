@@ -2,7 +2,7 @@ import resolve from 'rollup-plugin-node-resolve'
 import vue from 'rollup-plugin-vue'
 import commonjs from 'rollup-plugin-commonjs'
 import babel from 'rollup-plugin-babel'
-// import minify from 'rollup-plugin-babel-minify'
+import minify from 'rollup-plugin-babel-minify'
 import fileSize from 'rollup-plugin-filesize'
 import css from 'rollup-plugin-css-only'
 import pkg from './package.json'
@@ -20,14 +20,14 @@ const plugins = [
       isProduction: true
     }
   }),
-  css({ output: 'bundle.css' }),
+  css({ output: 'mekar.css' }),
   commonjs(),
   babel({
     exclude: 'node_modules/**'
   }),
-  // minify({
-  //   comments: false
-  // }),
+  minify({
+    comments: false
+  }),
   fileSize()
 ]
 
