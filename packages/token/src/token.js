@@ -87,22 +87,6 @@ const color = {
   white: "#ffffff",
 }
 
-const space = {
-  space0: "0px",
-  space2: "2px",
-  space4: "4px",
-  space8: "8px",
-  space12: "12px",
-  space16: "16px",
-  space20: "20px",
-  space24: "24px",
-  space32: "32px",
-  space40: "40px",
-  space48: "48px",
-  space60: "60px",
-  space100: "100px",
-}
-
 const font = {
   fontSize8: "8px",
   fontSize10: "10px",
@@ -120,17 +104,24 @@ const font = {
   fontSize100: "100px",
 }
 
-const border = {
-  radius4: "4px",
-  radius6: "6px",
-  radius8: "8px",
-  radius16: "16px",
-  radius100: "100%",
+const space = {
+  space0: "0px",
+  space2: "2px",
+  space4: "4px",
+  space8: "8px",
+  space12: "12px",
+  space16: "16px",
+  space20: "20px",
+  space24: "24px",
+  space32: "32px",
+  space40: "40px",
+  space48: "48px",
+  space60: "60px",
+  space100: "100px",
 }
 
 export {
   color,
   space,
   font,
-  border
 }

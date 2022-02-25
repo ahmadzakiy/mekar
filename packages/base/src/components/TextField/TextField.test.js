@@ -1,7 +1,7 @@
 import { shallowMount } from '@vue/test-utils'
 import TextField from './TextField'
 
-describe('Component: BlTextFieldAv', () => {
+describe('Component: TextField', () => {
   let instance
 
   const propsObj = {

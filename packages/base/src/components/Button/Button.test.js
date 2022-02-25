@@ -1,7 +1,7 @@
 import { shallowMount } from '@vue/test-utils'
 import Button from './Button'
 
-describe('Component: BlButtonAv', () => {
+describe('Component: Button', () => {
   let instance
 
   const propsObj = {

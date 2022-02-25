@@ -1,0 +1,64 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Component: Table Should match snapshot 1`] = `
+<table
+  class="table"
+>
+  <thead>
+    <tr>
+      
+      <th
+        class=""
+      >
+        Name 
+        <span
+          class="arrow dsc"
+        />
+      </th>
+      <th
+        class=""
+      >
+        Age 
+        <span
+          class="arrow dsc"
+        />
+      </th>
+      
+    </tr>
+  </thead>
+  <tbody>
+    
+    <tr>
+      
+      <td>
+        A
+      </td>
+      <td>
+        1
+      </td>
+      
+    </tr>
+    <tr>
+      
+      <td>
+        B
+      </td>
+      <td>
+        2
+      </td>
+      
+    </tr>
+    <tr>
+      
+      <td>
+        C
+      </td>
+      <td>
+        3
+      </td>
+      
+    </tr>
+    
+  </tbody>
+</table>
+`;
