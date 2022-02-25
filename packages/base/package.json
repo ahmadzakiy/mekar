@@ -1,6 +1,6 @@
 {
-  "name": "@mekar/library",
-  "version": "0.1.0",
+  "name": "mekar-library",
+  "version": "0.2.0",
   "description": "component library",
   "main": "dist/mekar.common.js",
   "module": "dist/mekar.es.js",
@@ -10,7 +10,8 @@
     "build": "rollup -c rollup.bundle.js",
     "start": "start-storybook -p 9999",
     "build-storybook": "build-storybook",
-    "release": "npm publish"
+    "release": "npm publish",
+    "version": "yarn build && git add . && git commit -m 'update: version' "
   },
   "author": "in.zakiy@gmail.com",
   "license": "MIT",

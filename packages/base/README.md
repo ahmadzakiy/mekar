@@ -4,7 +4,7 @@
 Install the library via NPM
 
 ```bash
-yarn add @mekar/libray
+yarn add mekar-libray
 ```
 
 ## How to Use
@@ -17,10 +17,10 @@ import Vue from 'vue'
 import App from './App.vue'
 
 // components
-import Lib from '@mekar/library'
+import Lib from 'mekar-library'
 
 // style
-import '@mekar/dist/mekar.css'
+import 'mekar-library/dist/mekar.css'
 
 Vue.use(Lib)
 
@@ -35,10 +35,10 @@ With this kind of import, you will include the whole bundle of the library, unle
 
 ```js
 // components
-import { Button } from '@mekar/library'
+import { Button } from 'mekar-library'
 
 // style
-import '@mekar/dist/bundle.css'
+import 'mekar-library/dist/bundle.css'
 ```
 
 ## Contribution

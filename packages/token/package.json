@@ -1,5 +1,5 @@
 {
-  "name": "@mekar/token",
+  "name": "mekar-token",
   "version": "0.1.0",
   "description": "token library",
   "main": "index.js",

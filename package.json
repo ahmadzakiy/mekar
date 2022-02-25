@@ -9,9 +9,9 @@
   "main": "index.js",
   "scripts": {
     "lint": "eslint --ext .js,.vue packages/** --ignore-path .gitignore",
-    "test": "yarn workspace @mekar/library test",
-    "start": "yarn workspace @mekar/library start",
-    "build-storybook": "yarn workspace @mekar/library build-storybook"
+    "test": "yarn workspace mekar-library test",
+    "start": "yarn workspace mekar-library start",
+    "build-storybook": "yarn workspace mekar-library build-storybook"
   },
   "author": "in.zakiy@gmail.com",
   "license": "MIT",

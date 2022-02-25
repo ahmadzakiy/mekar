@@ -26,7 +26,7 @@ describe('Component: Button', () => {
     expect(instance.vm.$options.name).toBe('Button')
   })
 
-  it('Should have class bl-button', () => {
+  it('Should have class button', () => {
     expect(instance.find('button').classes()).toContain('button')
   })
 
