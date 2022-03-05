@@ -37,7 +37,6 @@
 
   export default {
     name: 'Table',
-    version: '1.0.0',
     components: {
       StyledTable,
       StyledTh,

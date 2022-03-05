@@ -1,15 +1,10 @@
-import { Meta } from '@storybook/addon-docs'
-
-<Meta title="Getting Started" />
-
-# Mekar Library
-Collection of components as that published as library
+# Mekar Button
 
 ## Installation
-Install the library via NPM
+Install the component via NPM
 
 ```bash
-yarn add mekar-library
+yarn add mekar-button
 ```
 
 ## How to Use
@@ -22,19 +17,19 @@ import { createApp } from 'vue'
 import App from './App.vue'
 
 // components
-import Lib from 'mekar-library'
+import Button from 'mekar-button'
 
 const app = createApp(App)
-app.use(Lib)
+app.use(Button)
 app.mount('#app')
 ```
 
-### Selective Import
-With this kind of import, you will include the whole bundle of the library, unless your app have `treeshake` config.
+### Default Import
+With this kind of import, you will only include component that've been imported.
 
 ```js
 // components
-import { Button } from 'mekar-library'
+import Button from 'mekar-button'
 ```
 
 ## Contribution

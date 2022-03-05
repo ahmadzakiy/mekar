@@ -24,7 +24,6 @@
 
   export default {
     name: 'TextField',
-    version: '1.0.0',
     components: {
       StyledLabel,
       StyledInput

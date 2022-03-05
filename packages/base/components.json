@@ -1,0 +1,5 @@
+{
+  "Button": "./src/components/Button",
+  "Table": "./src/components/Table",
+  "TextField": "./src/components/TextField"
+}

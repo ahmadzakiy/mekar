@@ -16,7 +16,6 @@
 
   export default {
     name: 'Button',
-    version: '1.0.0',
     components: {
       StyledButton
     },

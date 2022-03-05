@@ -1,5 +1,6 @@
 .DS_Store
 node_modules
+src
 __diff_output__
 
 # local env files
