@@ -19,9 +19,6 @@ import App from './App.vue'
 // components
 import Lib from 'mekar-library'
 
-// style
-import 'mekar-library/dist/mekar.css'
-
 const app = createApp(App)
 app.use(Lib)
 app.mount('#app')
@@ -33,9 +30,6 @@ With this kind of import, you will include the whole bundle of the library, unle
 ```js
 // components
 import { Button } from 'mekar-library'
-
-// style
-import 'mekar-library/dist/mekar.css'
 ```
 
 ## Contribution

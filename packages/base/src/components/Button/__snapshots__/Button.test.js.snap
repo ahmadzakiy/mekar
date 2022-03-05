@@ -2,7 +2,7 @@
 
 exports[`Component: Button Should match snapshot 1`] = `
 <button
-  class="button"
+  class="edSiXT"
 >
   <!-- @slot Use slot for text -->
   

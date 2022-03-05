@@ -1,12 +1,14 @@
-import resolve from 'rollup-plugin-node-resolve'
+import resolve from '@rollup/plugin-node-resolve'
+import commonjs from '@rollup/plugin-commonjs'
+import json from '@rollup/plugin-json'
+import { getBabelOutputPlugin } from '@rollup/plugin-babel'
 import vue from 'rollup-plugin-vue'
-import commonjs from 'rollup-plugin-commonjs'
-import babel from 'rollup-plugin-babel'
-import minify from 'rollup-plugin-babel-minify'
+import { terser } from 'rollup-plugin-terser'
 import fileSize from 'rollup-plugin-filesize'
 import css from 'rollup-plugin-css-only'
 import pkg from './package.json'
 
+const path = require('path');
 const componentSource = {
   input: './src/index.js'
 }
@@ -21,13 +23,12 @@ const plugins = [
     }
   }),
   css({ output: 'mekar.css' }),
+  json(),
   commonjs(),
-  babel({
-    exclude: 'node_modules/**'
+  getBabelOutputPlugin({
+    configFile: path.resolve(__dirname, 'babel.config.js')
   }),
-  minify({
-    comments: false
-  }),
+  terser(),
   fileSize()
 ]
 
@@ -46,5 +47,5 @@ export default Object.assign({}, componentSource, {
     },
   ],
   plugins,
-  external: ['vue']
+  external: ['vue', 'vue3-styled-components']
 })
