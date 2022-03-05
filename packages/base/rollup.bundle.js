@@ -25,9 +25,9 @@ const plugins = [
   babel({
     exclude: 'node_modules/**'
   }),
-  minify({
-    comments: false
-  }),
+  // minify({
+  //   comments: false
+  // }),
   fileSize()
 ]
 
@@ -46,5 +46,5 @@ export default Object.assign({}, componentSource, {
     },
   ],
   plugins,
-  external: ['vue']
+  external: ['vue', 'vue3-styled-components']
 })

@@ -2,25 +2,25 @@
 
 exports[`Component: Table Should match snapshot 1`] = `
 <table
-  class="table"
+  class="gYzLSt"
 >
   <thead>
     <tr>
       
       <th
-        class=""
+        class="jVWJMh"
       >
         Name 
         <span
-          class="arrow dsc"
+          class="ikxunT"
         />
       </th>
       <th
-        class=""
+        class="jVWJMh"
       >
         Age 
         <span
-          class="arrow dsc"
+          class="ikxunT"
         />
       </th>
       
@@ -30,30 +30,42 @@ exports[`Component: Table Should match snapshot 1`] = `
     
     <tr>
       
-      <td>
+      <td
+        class="fXjbqp"
+      >
         A
       </td>
-      <td>
+      <td
+        class="fXjbqp"
+      >
         1
       </td>
       
     </tr>
     <tr>
       
-      <td>
+      <td
+        class="fXjbqp"
+      >
         B
       </td>
-      <td>
+      <td
+        class="fXjbqp"
+      >
         2
       </td>
       
     </tr>
     <tr>
       
-      <td>
+      <td
+        class="fXjbqp"
+      >
         C
       </td>
-      <td>
+      <td
+        class="fXjbqp"
+      >
         3
       </td>
       

@@ -1,30 +1,34 @@
 <template>
-  <label
-    class="label"
-    :for="id"
-  >
+  <StyledLabel :for="id">
     {{ label }}
-  </label>
-  <input
+  </StyledLabel>
+  <StyledInput
     v-bind="$attrs"
-    class="input"
-    :class="classes"
     :name="id"
     :value="modelValue"
+    :size="size"
     :disabled="isDisabled"
+    :is-disabled="isDisabled"
+    :is-error="isError"
+    :is-focus="isFocused"
     @input="handleInput"
     @focus="handleFocus"
     @blur="handleBlur"
     @click="handleClick"
-  >
+  />
 </template>
 
 <script>
+  import { StyledLabel, StyledInput } from './TextField.styled'
   import { SIZE } from './type'
 
   export default {
     name: 'TextField',
     version: '1.0.0',
+    components: {
+      StyledLabel,
+      StyledInput
+    },
     inheritAttrs: false,
     props: {
       /**
@@ -78,41 +82,6 @@
         isFocused: false
       }
     },
-    computed: {
-      classes() {
-        let list = []
-
-        if (this.isDisabled) {
-          list.push('is-disabled')
-        }
-
-        if (this.isError) {
-          list.push('is-error')
-        }
-
-        if (this.isFocused) {
-          list.push('is-focused')
-        }
-
-        return list
-      },
-      theme() {
-        let height, padding
-
-        if(this.size === 'small') {
-          height = '36px'
-          padding = '0px 12px'
-        } else {
-          height = '44px'
-          padding = '0px 20px'
-        }
-
-        return {
-          height,
-          padding,
-        }
-      }
-    },
     methods: {
       handleInput(event) {
         /**
@@ -162,68 +131,4 @@
   }
 </script>
 
-<style scoped>
-  .label {
-    display: block;
-    color: #3d3d3d;
-    font-family: sans-serif;
-    font-size: 14px;
-    line-height: 20px;
-    margin-bottom: 8px;
-  }
-
-  .input {
-    position: relative;
-    box-sizing: border-box;
-    -webkit-appearance: none;
-    -moz-appearance: none;
-    outline: none;
-    box-shadow: none;
-    letter-spacing: normal;
-    color: #3d3d3d;
-    font-family: sans-serif;
-    font-size: 16px;
-    line-height: 20px;
-    width: 100%;
-    height: v-bind('theme.height');
-    padding: v-bind('theme.padding');
-    background: #ffffff;
-    /*border-radius: 8px;*/
-    border: 2px solid #d6d6d6;
-    transition: all .2s ease-in-out;
-  }
-
-  .input:hover {
-    border-color: #2572b7;
-  }
-
-  .input::placeholder {
-    color: #8d8d8d;
-  }
-
-  .is-focused {
-    border-color: #2572b7;
-  }
-
-  .is-error {
-    border-color: #ec0c0c;
-  }
-
-  .is-error:hover {
-    border-color: #ec0c0c;
-  }
-
-  .is-disabled {
-    cursor: not-allowed;
-    background-color: #f2f2f2;
-    border-color: #f2f2f2;
-    color: #b6b6b6;
-  }
-
-  .is-disabled:hover {
-    background-color: #f2f2f2;
-    border-color: #f2f2f2;
-    color: #b6b6b6;
-  }
-</style>
 

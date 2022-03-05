@@ -1,4 +1,4 @@
-import { shallowMount } from '@vue/test-utils'
+import { mount } from '@vue/test-utils'
 import TextField from './Table'
 
 describe('Component: Table', () => {
@@ -12,7 +12,7 @@ describe('Component: Table', () => {
   }
 
   beforeEach(() => {
-    instance = shallowMount(TextField)
+    instance = mount(TextField)
   })
 
   afterEach(() => {
@@ -21,10 +21,6 @@ describe('Component: Table', () => {
 
   it('Should be named Table', () => {
     expect(instance.vm.$options.name).toBe('Table')
-  })
-
-  it('Should have class table', () => {
-    expect(instance.find('table').classes()).toContain('table')
   })
 
   it('Should match snapshot', async () => {
@@ -42,26 +38,6 @@ describe('Component: Table', () => {
 
   it('Should have default props', () => {
     expect(instance.props()).toEqual(propsObj)
-  })
-
-  it('Should handle theme correctly', async () => {
-    await instance.setProps({
-      size: 'medium',
-    })
-
-    expect(instance.vm.theme).toEqual({
-      height: '44px',
-      padding: '0px 20px',
-    })
-
-    await instance.setProps({
-      size: 'small',
-    })
-
-    expect(instance.vm.theme).toEqual({
-      height: '36px',
-      padding: '0px 12px',
-    })
   })
 
   it('Should render data correctly', async () => {
@@ -85,14 +61,6 @@ describe('Component: Table', () => {
     expect(instance.findAll('td')[3].text()).toBe('2')
     expect(instance.findAll('td')[4].text()).toBe('C')
     expect(instance.findAll('td')[5].text()).toBe('3')
-  })
-
-  it('Should render striped style correctly', async () => {
-    await instance.setProps({
-      isStriped: true
-    })
-
-    expect(instance.find('table').classes()).toContain('is-striped')
   })
 
   it('Should sort data correctly',  async () => {

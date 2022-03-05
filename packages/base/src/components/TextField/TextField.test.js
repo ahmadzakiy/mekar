@@ -1,4 +1,4 @@
-import { shallowMount } from '@vue/test-utils'
+import { mount } from '@vue/test-utils'
 import TextField from './TextField'
 
 describe('Component: TextField', () => {
@@ -14,7 +14,7 @@ describe('Component: TextField', () => {
   }
 
   beforeEach(() => {
-    instance = shallowMount(TextField)
+    instance = mount(TextField)
   })
 
   afterEach(() => {
@@ -25,10 +25,6 @@ describe('Component: TextField', () => {
     expect(instance.vm.$options.name).toBe('TextField')
   })
 
-  it('Should have class input', () => {
-    expect(instance.find('input').classes()).toContain('input')
-  })
-
   it('Should match snapshot', () => {
     expect(instance.element).toMatchSnapshot()
   })
@@ -37,41 +33,12 @@ describe('Component: TextField', () => {
     expect(instance.props()).toEqual(propsObj)
   })
 
-  it('Should handle theme correctly', async () => {
-    await instance.setProps({
-      size: 'medium',
-    })
-
-    expect(instance.vm.theme).toEqual({
-      height: '44px',
-      padding: '0px 20px',
-    })
-
-    await instance.setProps({
-      size: 'small',
-    })
-
-    expect(instance.vm.theme).toEqual({
-      height: '36px',
-      padding: '0px 12px',
-    })
-  })
-
   it('Should render disabled state correctly', async () => {
     await instance.setProps({
       isDisabled: true
     })
 
-    expect(instance.find('input').classes()).toContain('is-disabled')
     expect(instance.find('input').element.disabled).toBeTruthy()
-  })
-
-  it('Should render error state correctly', async () => {
-    await instance.setProps({
-      isError: true
-    })
-
-    expect(instance.find('input').classes()).toContain('is-error')
   })
 
   it('Should render label correctly correctly',  async () => {
