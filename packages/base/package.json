@@ -5,13 +5,13 @@
   "main": "dist/mekar.common.js",
   "module": "dist/mekar.es.js",
   "scripts": {
+    "start": "start-storybook -p 9999",
     "clean": "rm -rf ./dist && rm -rf ./src/components/**/dist",
     "test": "jest --coverage",
     "test:snapshot": "jest -u",
     "build": "yarn clean && yarn build:bundle && yarn build:component",
     "build:bundle": "rollup -c rollup.bundle.js",
     "build:component": "rollup -c rollup.component.js",
-    "start": "start-storybook -p 9999",
     "build-storybook": "build-storybook",
     "release": "npm publish",
     "version": "yarn build && git add . && git commit -m 'update: version' "
